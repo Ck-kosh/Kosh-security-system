@@ -1,0 +1,276 @@
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+/* Navigation Bar */
+.nav {
+    background: #1b314e;
+    color: #fff;
+    padding: 15px 0;
+}
+.nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav h1 {
+    font-size: 20px;
+    color: #ff6b00;
+}
+
+/* Nav Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6b00;
+}
+/* Form */
+.contact form {
+    max-width: 600px;
+    margin: auto;
+    background: #0a043c;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+/* Labels */
+.contact label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs & Textarea */
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #070e94;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #ff6b00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 107, 0, 0.3);
+}
+
+/* Each Item */
+.contact-info li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 15px;
+}
+
+/* Remove last border */
+.contact-info li:last-child {
+    border-bottom: none;
+}
+
+/* Highlight labels */
+.contact-info strong {
+    color: #ff6b00;
+    margin-right: 5px;
+}
+
+/* Hover effect */
+.contact-info li:hover {
+    background: rgba(255,255,255,0.05);
+    padding-left: 10px;
+    transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/* service Section */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 40px 0;
+}
+
+//* service Grid */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 40px 0;
+}
+/* Hover Effect */
+.product-list li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Product Title */
+.product-list h2 {
+    font-size: 16px;
+    color: #1e2a38;
+    padding: 15px;
+}
+/* Hover button effect */
+.product-list li:hover::after {
+    background: #e65c00;
+}
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background: #ddd;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background: #28a745;
+    color: white;
+}
+
+/* Hide inactive payment method */
+.hidden {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+
+.tab.active {
+    background: #28a745;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://home-cdn.reolink.us/wp-content/uploads/2024/12/closed-circuit-security-cameras.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff6b00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e65c00;
+}
+
+/* Footer */
+footer {
+    background: #1e2a38;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about, .services, .featured, .cta {
+    background: #dbdbe1;
+    margin-top: 10px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* product cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(96, 87, 227, 0.1);
+}
+
+
+.btn:hover {
+    background: #690404;
+}
+
+

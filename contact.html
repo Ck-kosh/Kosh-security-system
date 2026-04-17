@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Helping-heart-foundation</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<div class="nav">
+    <div class="container">
+
+        <h1>Kosh Security System</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">AboutUs</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+
+
+<!-- HEADER -->
+<section class="header">
+    <h1>Contact Us</h1>
+    <p>We would love to hear from you</p>
+</section>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <!-- FORM -->
+    <form onsubmit="handleSubmit(event)">
+        <h2>Send Us a Message</h2>
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <!-- CONTACT INFO -->
+    <div class="info">
+        <h2>Get In Touch</h2>
+
+        <h3>Eldoret</h3>
+        <p>Rift-valley Kenya</p>
+
+        <h3>Phone</h3>
+        <p>+254 769 021 360</p>
+        
+        <h3>Email</h3>
+        <p>koshsecuritysystem@gmail.com</p>
+
+        <h3>WhatsApp</h3>
+        <a class="whatsapp" href="https://wa.me/254769021360" target="_blank">
+            Chat on WhatsApp
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Hope Haven Orphanage</p>
+</footer>
+
+<!-- SIMPLE FORM SCRIPT -->
+<script>
+function handleSubmit(e) {
+    e.preventDefault();
+    alert("Thank you! Your message has been sent.");
+}
+</script>
+
+</body>
+</html>
+
+<!-- Contact CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Need Help Finding Parts?</h2>
+        <p>Need CCTV installation services in Nairobi Kenya or have a question? Get in touch with us. You can call us, visit us Along Kenneth Matiba Road, or email us by filling the inquiry form and one of our representatives will get in touch with you.</p>
+        <p>Contact our team for expert assistance and recommendations.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+</section>
