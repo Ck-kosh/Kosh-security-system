@@ -1,253 +1,230 @@
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+/* ===== COLOR THEME ===== */
+:root {
+    --black: #000000;
+    --dark-blue: #0a1f44;
+    --white: #ffffff;
+    --maroon: #5a0f1c;
 }
-/* Navigation Bar */
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
 .nav {
-    background: #1b314e;
-    color: #fff;
+    background: var(--dark-blue);
+    color: var(--white);
     padding: 15px 0;
 }
-.nav .container {
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav h1 {
-    font-size: 20px;
-    color: #ff6b00;
+    font-size: 22px;
 }
 
-/* Nav Links */
+/* NAV LINKS */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
 }
 
 nav ul li a {
+    color: var(--white);
     text-decoration: none;
-    color: #fff;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff6b00;
-}
-/* Form */
-.contact form {
-    max-width: 600px;
-    margin: auto;
-    background: #0a043c;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-/* Labels */
-.contact label {
-    display: inline-block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+    color: var(--maroon);
 }
 
-/* Inputs & Textarea */
-.contact input,
-.contact textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #070e94;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: 0.3s;
+/* ===== HEADINGS ===== */
+h1, h2, h3 {
+    color: var(--dark-blue);
+    margin-bottom: 10px;
 }
 
-.contact input:focus,
-.contact textarea:focus {
-    border-color: #ff6b00;
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 107, 0, 0.3);
-}
-
-/* Each Item */
-.contact-info li {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    font-size: 15px;
-}
-
-
-/* Highlight labels */
-.contact-info strong {
-    color: #ff6b00;
-    margin-right: 5px;
-}
-
-/* Hover effect */
-.contact-info li:hover {
-    background: rgba(255,255,255,0.05);
-    padding-left: 10px;
-    transition: 0.3s;
-}
-
-/* service Section */
-.service-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    list-style: none;
-    padding: 40px 0;
-}
-
-//* service Grid */
-.service-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    list-style: none;
-    padding: 40px 0;
-}
-/* Hover Effect */
-.product-list li:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-/* Product Title */
-.product-list h2 {
-    font-size: 16px;
-    color: #1e2a38;
-    padding: 15px;
-}
-/* Hover button effect */
-.product-list li:hover::after {
-    background: #e65c00;
-}
-/* Tabs */
-.tabs {
-    display: flex;
-    margin-bottom: 15px;
-}
-
-.tab {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    background: #ddd;
-    cursor: pointer;
-    margin: 2px;
-    border-radius: 5px;
-}
-
-.tab.active {
-    background: #28a745;
-    color: white;
-}
-
-/* Hide inactive payment method */
-.hidden {
-    display: none;
-}
-.hidden {
-    display: none;
-}
-
-.tab.active {
-    background: #28a745;
-    color: white;
-}
-
-/* Hero Section */
+/* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url('https://home-cdn.reolink.us/wp-content/uploads/2024/12/closed-circuit-security-cameras.jpg');
     background-size: cover;
+    max-height: fit-content;
+    min-width: max-content;
     background-position: center;
-    color: #fff;
-    height: 80vh;
+
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--maroon);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 40px 20px;
+}
+
+/* ===== PRODUCTS ===== */
+.product {
+    background: var(--white);
+    border: 2px solid var(--dark-blue);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 250px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* BUTTONS */
+button {
+    background: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: var(--maroon);
+}
+
+/* ADD TO CART */
+.add-btn {
+    background: var(--maroon);
+}
+
+.add-btn:hover {
+    background: var(--black);
+}
+
+/* ===== PRODUCT GRID ===== */
+.product-grid {
     display: flex;
-    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* CARDS */
+.card {
+    background: var(--white);
+    border: 2px solid var(--maroon);
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 18px;
+/* ===== FORM ===== */
+form {
+    background: var(--white);
+    border: 2px solid var(--dark-blue);
+    padding: 20px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
-/* Button */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #ff6b00;
-    color: #fff;
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--black);
+}
+
+/* ===== CONTACT INFO ===== */
+.info {
+    border: 2px solid var(--maroon);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ===== CTA ===== */
+.cta {
+    background: var(--maroon);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta .btn {
+    background: var(--white);
+    color: var(--maroon);
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #e65c00;
-}
-
-/* Footer */
-footer {
-    background: #1e2a38;
-    color: #ccc;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-}
-
-
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.about, .services, .featured, .cta {
-    background: #dbdbe1;
+    display: inline-block;
     margin-top: 10px;
 }
 
-.services ul {
-    list-style: none;
-    padding: 0;
-}
-
-.services li {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-/* product cards */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+/* ===== FOOTER ===== */
+footer {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
     margin-top: 20px;
 }
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(96, 87, 227, 0.1);
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 
-.btn:hover {
-    background: #690404;
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-menu.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
 }
-
-

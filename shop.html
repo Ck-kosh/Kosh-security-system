@@ -3,33 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Helping-heart-foundation</title>
-   <link rel="stylesheet" href="style.css">
-   <title>CCTV CAMERAS</title>
+    <title>CCTV Cameras - Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="nav">
-    <div class="container">
 
+<!-- NAV -->
+<div class="nav">
+    <div class="container">
         <h1>CCTV CAMERAS</h1>
 
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">AboutUs</a></li>
+                <li><a href="contact.html">Contactus</a></li>
             </ul>
         </nav>
-
     </div>
 </div>
-<p>Shop for the best Security and CCTV Cameras in Nairobi Kenya at best prices in Kenya. We also offer commercial and residential CCTV installation services in Nairobi and throughout Kenya.
 
-Our Hikvision products are imported and of high quality, they also come with a one year warranty period. We have a Professional and Highly Qualified Technical Team. Our prices fit any buyer whether the end user or those who do resale. Here are all Hikvision cameras</p>
+<!-- INTRO -->
+
+<!-- PRODUCT -->
+<div class="product">
+    <h3>Dahua SMART ANPR Camera</h3>
+    <img src="Images/Dahua SMART ANPR Camera.jpj" alt="Camera">
+
+    <p>Ksh 50,000</p>
+
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+
+    <button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Uniview 4MP Bulle</h3>
+    <img src="Images/Uniview 4MP Full Colour Bullet" alt="Camera">
+
+    <p>Ksh 5,500</p>
+
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+
+<button onclick="addToCart(1, 1)">Add to Cart</button></div>
+
+<div class="product">
+    <h3>4G Solar CCTV Camera V380
+</h3>
+    <img src="Images/4G Solar CCTV Camera V380.jpg" alt="Camera">
+
+    <p>Ksh 9,000</p>
+
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+
+    <button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>4G Solar Floodlight PTZ Security CCTV Camera
+</h3>
+    <img src="Images/4G Solar Floodlight PTZ Security CCTV Camera.webp" alt="Camera">
+
+    <p>Ksh 24,000</p>
+
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+<button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Tiandy PTZ Camera</h3>
+    <img src="Images/Tiandy 2MP 23x IR PTZ Camera" alt="Camera" width="200">
+    <p>Ksh 27,000</p>
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+
+   <button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Indoor Wireless Camera</h3>
+    <img src="Images/Indoor Wireless Security Camera Kenya | HD" alt="Indoor Camera" width="200">
+    <p>Ksh 5,600</p>
+     <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+   <button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+<h2>DVR Channels</h2>
+<div class="product">
+    <h3>Dahua 8 Channel DVR</h3>
+    <img src="Images/Dahua 8 Channel DVR Digital Video Recorder" alt="DVR 8 Channel">
+    <p>Ksh 6,000</p>
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+    <button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Hikvision 16 Channel DVR</h3>
+    <img src="Images/Hikvision 16 Channel DVR Metallic Upto 1080 DS-7216HGHI.jpg" alt="DVR 16 Channel">
+    <p>Ksh 13,500</p>
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+    <button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Dahua 4 Channel DVR</h3>
+    <img src="Images/Dahua 4 Channel DVR DH-XVR1B04H-I(V2.0).webp" alt="DVR 4 Channel">
+    <p>Ksh 13,500</p>
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+   <button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>HIKVISION 8 Channel HD DVR Up to 1080 Plastic DS-7108HG</h3>
+    <img src="Images/HIKVISION 8 Channel HD DVR Up to 1080 Plastic DS-7108HG.jpg" alt="DVR 4 Channel">
+    <p>Ksh 6,500</p>
+    <label>Quantity:</label>
+    <input type="number" value="1" min="1">
+    <button onclick="addToCart(1, 1)">Add to Cart</button>
+</div>
+
+<!-- CART -->
+<div id="cart-display">
+    <h3>Your Cart (0 items)</h3>
+    <ul>
+       <li>No items added</li>
+    </ul>
+</div>
+<!-- FORM -->
+    <form onsubmit="handleSubmit(event)">
+        <h2>Your request</h2>
+
+        <input type="text" placeholder="Type of camera " required height="20eq" height="3eq" >
+        <input type="text" placeholder="Quantity" required>
+        <textarea rows="5" placeholder="Make Your service request" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+<script src="index.js"></script>
+
+<script src="server.js"></script>
 </body>
-<h2>Product categories</h2>
-<ul>
-    <li></li>
-</ul>
 </html>

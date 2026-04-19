@@ -1,51 +1,40 @@
+let cartCount = 0;
 
+const cartDisplay = document.querySelector("#cart-display h3");
+const cartList = document.querySelector("#cart-display ul");
 
-//     // Determine which form is active
-//     if (!document.getElementById("mpesa").classList.contains("hidden")) {
-//         phone = phoneInputs[0].value;
-//         amount = amountInputs[0].value;
-//     } else {
-//         phone = phoneInputs[1].value;
-//         amount = amountInputs[1].value;
-//     }
+const buttons = document.querySelectorAll(".product button");
 
-//     if (phone === "" || amount === "") {
-//         alert("Please fill in all fields");
-//         return;
-//     }
+buttons.forEach(button => {
+    button.addEventListener("click", function () {
+        const product = this.parentElement;
+        const name = product.querySelector("h3").innerText;
+        const qty = product.querySelector("input").value;
 
-//     alert(`Processing ${method} payment of KES ${amount} for ${phone}`);
-// }
-<script>
-function handleSubmit(e) {
-    e.preventDefault();
+        cartCount += parseInt(qty);
 
-    // Get form elements
-    const form = e.target;
-    const name = form.querySelector('input[type="text"]').value.trim();
-    const email = form.querySelector('input[type="email"]').value.trim();
-    const message = form.querySelector('textarea').value.trim();
+        // Update cart title
+        cartDisplay.innerText = `Your Cart (${cartCount} items)`;
 
-    // Simple validation
-    if (!name || !email || !message) {
-        alert("Please fill in all fields.");
-        return;
-    }
+        // Remove "No items added"
+        if (cartList.children[0]?.innerText === "No items added") {
+            cartList.innerHTML = "";
+        }
 
-    // Email format check
-    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (!email.match(emailPattern)) {
-        alert("Please enter a valid email address.");
-        return;
-    }
+        // Add item to list
+        const li = document.createElement("li");
+        li.innerText = `${name} x ${qty}`;
+        cartList.appendChild(li);
 
-    // Simulate sending (you can later connect to backend)
-    console.log("Form Data:", { name, email, message });
+        // Change button text temporarily
+        button.innerText = "Added!";
+        button.style.backgroundColor = "green";
+        button.style.color = "white";
 
-    // Show success message
-    alert(`Thank you ${name}! Your message has been sent successfully.`);
-
-    // Clear form
-    form.reset();
-}
-</script>
+        setTimeout(() => {
+            button.innerText = "Add to Cart";
+            button.style.backgroundColor = "";
+            button.style.color = "";
+        }, 1500);
+    });
+});

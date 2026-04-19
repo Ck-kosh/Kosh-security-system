@@ -1,0 +1,39 @@
+## KOSH SECURITY SYSTEM
+Kosh Security Systems is a trusted provider of modern security solutions designed to protect what matters most. We specialize in delivering reliable, scalable, and intelligent CCTV services tailored to residential, commercial, and industrial clients.
+## OUR SERVICES 
+CCTV Surveillance Systems
+HD & IP cameras
+Remote monitoring via mobile & web
+24/7 recording and playback
+## INSTALLATION & SUPPORT
+We provide end-to-end services:
+-Site assessment & consultation
+-Professional installation
+-System configuration
+-Maintenance & technical support
+## INDUSTRIES WE SERVE
+✔Residential Homes
+✔Corporate Offices
+✔Retail Stores
+✔Warehouses
+✔Schools & Institutions
+✔Government Facilities
+## WHY CHOOSE US
+✔ Experienced & certified technicians
+✔ High-quality, reliable equipment
+✔ Customized security solutions
+✔ 24/7 customer support
+✔ Competitive pricing
+## TECHNOLOGIES WE USE
+IP-based surveillance systems
+Cloud storage & remote access
+## CONTACT US
+Phone: +254 747 075 360
+Email: koshsecuritysystem@gmail.com
+Website: https://github.com/Ck-kosh/Kosh-security-system.git
+Location: Nairobi, Kenya
+## LICENSE
+This project and its documentation are proprietary to Kosh security system. Unauthorized use or distribution is prohibited.
+## AUTHOR
+1.Elias Kosh
+2.Antoz Cheruiyot
