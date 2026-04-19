@@ -1,59 +1,40 @@
-const express = require("express");
-const cors = require("cors");
+let cartCount = 0;
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+const cartDisplay = document.querySelector("#cart-display h3");
+const cartList = document.querySelector("#cart-display ul");
 
-// Fake database
-let products = [
-  { id: 1, name: "Dahua SMART ANPR Camera", price: 50000 },
-  { id: 2, name: "Uniview 4MP Bullet", price: 5500 },
-  { id: 3, name: "4G Solar CCTV Camera V380", price: 9000 },
-  { id: 4, name: "4G Solar Floodlight PTZ Camera", price: 24000 },
-  { id: 5, name: "Tiandy PTZ Camera", price: 27000 },
-  { id: 6, name: "Indoor Wireless Camera", price: 5600 },
-  { id: 7, name: "Dahua 8 Channel DVR", price: 6000 },
-  { id: 8, name: "Hikvision 16 Channel DVR", price: 13500 }
-];
+const buttons = document.querySelectorAll(".product button");
 
-let cart = [];
+buttons.forEach(button => {
+    button.addEventListener("click", function () {
+        const product = this.parentElement;
+        const name = product.querySelector("h3").innerText;
+        const qty = product.querySelector("input").value;
 
-// 📦 GET all products
-app.get("/api/products", (req, res) => {
-  res.json(products);
-});
+        cartCount += parseInt(qty);
 
-// 🛒 ADD to cart
-app.post("/api/cart", (req, res) => {
-  const { productId, quantity } = req.body;
+        // Update cart title
+        cartDisplay.innerText = `Your Cart (${cartCount} items)`;
 
-  const product = products.find(p => p.id === productId);
+        // Remove "No items added"
+        if (cartList.children[0]?.innerText === "No items added") {
+            cartList.innerHTML = "";
+        }
 
-  if (!product) {
-    return res.status(404).json({ message: "Product not found" });
-  }
+        // Add item to list
+        const li = document.createElement("li");
+        li.innerText = `${name} x ${qty}`;
+        cartList.appendChild(li);
 
-  cart.push({ ...product, quantity });
+        // Change button text temporarily
+        button.innerText = "Added!";
+        button.style.backgroundColor = "green";
+        button.style.color = "white";
 
-  res.json({ message: "Added to cart", cart });
-});
-
-// 🧾 GET cart
-app.get("/api/cart", (req, res) => {
-  res.json(cart);
-});
-
-// 📩 Submit request form
-app.post("/api/request", (req, res) => {
-  const { type, quantity, message } = req.body;
-
-  console.log("New request:", { type, quantity, message });
-
-  res.json({ message: "Request submitted successfully" });
-});
-
-// Start server
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+        setTimeout(() => {
+            button.innerText = "Add to Cart";
+            button.style.backgroundColor = "";
+            button.style.color = "";
+        }, 1500);
+    });
 });
